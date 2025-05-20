@@ -54,9 +54,24 @@ class OnboardingScreen extends StatelessWidget {
           ],
         ),
       ),
-          floatingActionButton: uihelper.CustomButton(Callback: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Loginscreen()));
-          }, buttonName: "Agree and Continue"),
+          floatingActionButton:SizedBox(
+            height: 45,
+            width: 300,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Loginscreen()),
+                );
+
+
+              },style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),
+              child: Text(
+                'Agree and Continue',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+          ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
