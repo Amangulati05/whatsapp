@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 
 class uihelper {
   static CustomButton({
-    required VoidCallback Callback,
+    required VoidCallback callback,
     required String buttonName,
   }) {
     return SizedBox(
       height: 45,
-      width: 350,
+      width: 300,
       child: ElevatedButton(
         onPressed: () {
-          Callback ();
+          callback ();
 
         },style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),
         child: Text(
-          'Button name',
+          'Next',
           style: TextStyle(fontSize: 14, color: Colors.white),
         ),
       ),
@@ -34,5 +34,27 @@ class uihelper {
       style: TextStyle(fontSize: height, color: color ?? Color(0xff5E5E5E),
       fontWeight: fontweight),
     );
+  }
+  static CustomContainer(TextEditingController controller){
+    return Container(
+      height: 40,
+      width: 40,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Color(0XFFD9D9D9)
+
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: TextField(
+          controller: controller,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+
+          ),
+        ),
+      ),
+    );
+
   }
 }
