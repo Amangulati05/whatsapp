@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:whatsapp/Screens/Profile%20screen.dart';
+=======
+>>>>>>> origin/master
 import 'package:whatsapp/Widgets/Uihelper.dart';
 
 class Otpscreen extends StatelessWidget {
@@ -94,12 +97,15 @@ class Otpscreen extends StatelessWidget {
         width: 300,
         child: ElevatedButton(
           onPressed: () {
+<<<<<<< HEAD
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => ProfileScreen()),
 
             );
+=======
+>>>>>>> origin/master
 
 
           },style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),
